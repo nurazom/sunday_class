@@ -60,7 +60,7 @@ class _BouttoncolumrowState extends State<Bouttoncolumrow> {
         actions: [
         Container(
            child: Align(
-            alignment: Alignment.center,
+           alignment: Alignment.center,
            child: Text("satings"),),
 
 

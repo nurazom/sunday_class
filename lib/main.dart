@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sunday_class/bouttoncolumrow.dart';
+import 'package:sunday_class/myprofile.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Bouttoncolumrow(),
+      home: ProfilePage(),
     );
   }
 }
