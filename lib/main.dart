@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sunday_class/bouttoncolumrow.dart';
+import 'package:sunday_class/eddit_page.dart';
 import 'package:sunday_class/myprofile.dart';
+import 'package:sunday_class/splash_screen.dart';
 
 void main() {
   runApp(MyApp());

@@ -82,7 +82,7 @@ class _BouttoncolumrowState extends State<Bouttoncolumrow> {
 
 
 
-        )
+        ),
         ],
       ),
 

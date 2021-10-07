@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:sunday_class/eddit_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key key}) : super(key: key);
@@ -28,26 +29,41 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ),
         actions:[
-          Padding(
-            padding: EdgeInsets.all(12),
-            child: Container(
-              height: 20,
-              width: 80,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.black,
-                  width:3,
-                  style: BorderStyle.solid,
+      
+          InkWell(
+            onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EdditPaze(),
+                  ),
+                );
+              },
+
+            child: Padding(
+              padding: EdgeInsets.all(12),
+              child: Container(
+                height: 20,
+                width: 80,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.black,
+                    width:3,
+                    style: BorderStyle.solid,
+                  ),
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.green.shade400,
                 ),
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.green.shade400,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children:[
-                  Text("Edit"),
-                  Icon(Icons.create_sharp,size: 12,),
-                ],
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children:[
+                    Text("Edit"),
+                    Icon(Icons.create_sharp),
+                 
+                      
+                      
+                  ],
+                ),
               ),
             ),
           ),
@@ -72,7 +88,7 @@ class _ProfilePageState extends State<ProfilePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
              
-              child: Text("Name:Md Nur Azom"),
+              //child: Text("Name:Md Nur Azom"),
               
             ],
           )
