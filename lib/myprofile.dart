@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:sunday_class/Follower_Page.dart';
+import 'package:sunday_class/Following_Page.dart';
+import 'package:sunday_class/Messenger_Page.dart';
+import 'package:sunday_class/Posts_Page.dart';
 import 'package:sunday_class/eddit_page.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -222,7 +226,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(245, 245, 245, 0.5),
                         ),
                         child: FlatButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Post_Page()),
+                            );
+                          },
                           icon: Icon(
                             CupertinoIcons.plus_square_on_square,
                             size: 12,
@@ -251,7 +261,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(245, 245, 245, .5),
                         ),
                         child: FlatButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Messenger_Page()),
+                            );
+                          },
                           icon: Icon(
                             Icons.message_outlined,
                             size: 12,
@@ -280,7 +296,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(245, 245, 245, .5),
                         ),
                         child: FlatButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Following_Page()),
+                            );
+                          },
                           icon: Icon(
                             Icons.follow_the_signs_rounded,
                             size: 12,
@@ -310,7 +332,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(245, 245, 245, .5),
                         ),
                         child: FlatButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Follower_Page()),
+                            );
+                          },
                           icon: Icon(
                             Icons.add_circle_outline,
                             size: 12,
