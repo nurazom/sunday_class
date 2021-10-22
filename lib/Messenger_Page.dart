@@ -15,8 +15,14 @@ class _Messenger_PageState extends State<Messenger_Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Messenger"),
-
+        title: Text(
+          "Messenger",
+          style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 28,
+              color: Color.fromRGBO(31, 31, 45, 0.9)),
+        ),
+        centerTitle: true,
         //
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
