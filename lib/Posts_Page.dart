@@ -10,11 +10,11 @@ import 'package:sunday_class/myprofile.dart';
 List<PostModel> post = [
   PostModel(
     //1st post
-    username: 'nur123',
+    username: 'Sheikh Hasina',
     profileImageUrl: 'images/Sheikh-Hasina.jpg',
-    caption: '1st colages',
+    caption: 'Khulna Government Mahila College',
     postImageUrl: 'images/posts/post_1.jpg',
-    address: '1st Address',
+    address: ' Jalil - Sarani, Khulna,Khulna,Bangaldesh',
     likes: 1,
   ),
   PostModel(
@@ -35,6 +35,55 @@ List<PostModel> post = [
     address: '1st Address',
     likes: 1,
   ),
+  PostModel(
+      username: 'Sheikh Hasina',
+      profileImageUrl: 'images/Sheikh-Hasina.jpg',
+      caption: 'Azam Khan Government Commerce College',
+      address: 'Babu Khan Rd, Khulna,Khulna,Bangladesh',
+      postImageUrl: 'images/posts/post_4.jpg',
+      likes: 45),
+  PostModel(
+      username: 'Sheikh Hasina',
+      profileImageUrl: 'images/Sheikh-Hasina.jpg',
+      caption: 'Azam Khan Government Commerce College',
+      address: 'Kashipur, B.L. College Rd, Khulna,Khulna,Bangladesh',
+      postImageUrl: 'images/posts/post_5.jpg',
+      likes: 35),
+  PostModel(
+      username: 'Sheikh Hasina',
+      profileImageUrl: 'images/Sheikh-Hasina.jpg',
+      caption: 'Govt. M. M. City College',
+      address: '300 Khan Jahan Ali Rd, Khulna-9100,Khulna,Bangladesh',
+      postImageUrl: 'images/posts/post_6.jpg',
+      likes: 23),
+  PostModel(
+      username: 'Sheikh Hasina',
+      profileImageUrl: 'images/Sheikh-Hasina.jpg',
+      caption: 'Khulna Public College',
+      address: 'public college, road, Khulna-9000,Khulna,Bangladesh',
+      postImageUrl: 'images/posts/post_7.jpg',
+      likes: 845),
+  PostModel(
+      username: 'Sheikh Hasina',
+      profileImageUrl: 'images/Sheikh-Hasina.jpg',
+      caption: 'Khulna Government College',
+      address: 'Hasanbag Road, Khulna,Khulna,Bangladesh',
+      postImageUrl: 'images/posts/post_8.jpg',
+      likes: 5355),
+  PostModel(
+      username: 'Sheikh Hasina',
+      profileImageUrl: 'images/Sheikh-Hasina.jpg',
+      caption: 'Government Sundarban Adarsha College',
+      address: '91 Khanjhan Ali road, Jessore-Dhaka Highway, Khulna,Bangladesh',
+      postImageUrl: 'images/posts/post_9.jpg',
+      likes: 4845),
+  PostModel(
+      username: 'Sheikh Hasina',
+      profileImageUrl: 'images/Sheikh-Hasina.jpg',
+      caption: 'Khulna Islamia Degree College',
+      address: ' M A Bari St, Khulna,Khulna,Bangladesh',
+      postImageUrl: 'images/posts/post_10.jpg',
+      likes: 245),
 ];
 
 class Post_Page extends StatefulWidget {
@@ -138,12 +187,68 @@ class _Post_PageState extends State<Post_Page> {
                                     color: Color.fromRGBO(21, 21, 21, 1),
                                     fontWeight: FontWeight.w700,
                                     fontSize: 17),
-                                textAlign: TextAlign.start)
+                                textAlign: TextAlign.start),
                           ],
                         ),
                       ],
                     ),
                   ),
+                  //for caption
+                  Container(
+                    height: MediaQuery.of(context).size.height / 12,
+                    width: MediaQuery.of(context).size.width,
+                    color: Color.fromARGB(21, 21, 21, 2),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Text(
+                        "${post[index].caption}",
+                        style: TextStyle(fontSize: 19),
+                      ),
+                    ),
+                  ),
+                  //images container
+                  Container(
+                    height: MediaQuery.of(context).size.height / 2.5,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("${post[index].postImageUrl}"),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                  //like comment shere container
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: MediaQuery.of(context).size.height / 21,
+                      width: MediaQuery.of(context).size.width,
+                      // color: Color.fromRGBO(44, 2, 21, 2),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          //like button
+                          FlatButton.icon(
+                            onPressed: () {},
+                            icon: Icon(Icons.thumb_up),
+                            label: Text("Like"),
+                          ),
+                          //comment button
+                          FlatButton.icon(
+                            onPressed: () {},
+                            icon: Icon(Icons.comment),
+                            label: Text("Comment"),
+                          ),
+                          //Shere button
+                          FlatButton.icon(
+                            onPressed: () {},
+                            icon: Icon(Icons.share),
+                            label: Text("Shere"),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
                 ],
               ),
             );
@@ -151,23 +256,3 @@ class _Post_PageState extends State<Post_Page> {
     );
   }
 }
-/* RichText(
-                          text: TextSpan(
-                              text: "${post[index].username}",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700,
-                                color: Color.fromRGBO(21, 21, 21, 1),
-                                height: 1.2,
-                              ),
-                              children: [
-                                TextSpan(
-                                  text: "${DateTime.now()}",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 15,
-                                      color: Color.fromRGBO(21, 21, 21, 1)),
-                                ),
-                              ]),
-                        ),
-                        // */
