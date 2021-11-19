@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sunday_class/Timeline.dart';
 import 'package:sunday_class/bouttoncolumrow.dart';
 import 'package:sunday_class/eddit_page.dart';
 import 'package:sunday_class/myprofile.dart';
@@ -17,12 +18,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
-        
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ProfilePage(),
+      home: TimelinePage(),
     );
   }
 }
